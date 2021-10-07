@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,17 +47,20 @@ public class Buttons07 : MonoBehaviour {
 
 
 // -------------------- STATIC VARIABLES --------------------
-
+    public static int SelectedCityDuel;
 
 // ------------------------------ END: LIST OF VARIABLES ------------------------------
 // ------------------------------ START: CALLING OTHER SCRIPTS ------------------------------
     // Scene Changing
     public SceneChange Scene05LoadRun;
+    public SceneChange Scene08LoadRun;
 
 // ------------------------------ END: CALLING OTHER SCRIPTS ------------------------------
 // ------------------------------ START: CALLING INITIAL FUNCTIONS ------------------------------
 // -------------------- START FUNCTION --------------------
     void Start() {
+        SelectedCityDuel = 0;
+
         // RandomButton
         Button RandomButtonClick = RandomButton.GetComponent<Button>();
         RandomButtonClick.onClick.AddListener(RandomButtonClicking);
@@ -190,7 +192,8 @@ public class Buttons07 : MonoBehaviour {
 // ------------------------------ START: OTHER FUNCTIONS ------------------------------
 // -------------------- BUTTON FUNCTIONS --------------------
     public void RandomButtonClicking() {
-        //
+        SelectedCityDuel = Random.Range(1,22);
+        Scene08LoadRun.Scene08Load();
     }
 
     public void LevelButton1OnClicking() {
@@ -214,94 +217,117 @@ public class Buttons07 : MonoBehaviour {
     }
 
     public void BackButtonClicking() {
+        SelectedCityDuel = 0;
         Scene05LoadRun.Scene05Load();
     }
 
     public void CityA1OnClicking() {
-        //
+        SelectedCityDuel = 1;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityA2OnClicking() {
-        //
+        SelectedCityDuel = 2;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityA3OnClicking() {
-        //
+        SelectedCityDuel = 3;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityA4OnClicking() {
-        //
+        SelectedCityDuel = 4;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityA5OnClicking() {
-        //
+        SelectedCityDuel = 5;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityB1OnClicking() {
-        //
+        SelectedCityDuel = 6;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityB2OnClicking() {
-        //
+        SelectedCityDuel = 7;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityB3OnClicking() {
-        //
+        SelectedCityDuel = 8;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityB4OnClicking() {
-        //
+        SelectedCityDuel = 9;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityB5OnClicking() {
-        //
+        SelectedCityDuel = 10;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityC1OnClicking() {
-        //
+        SelectedCityDuel = 11;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityC2OnClicking() {
-        //
+        SelectedCityDuel = 12;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityC3OnClicking() {
-        //
+        SelectedCityDuel = 13;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityC4OnClicking() {
-        //
+        SelectedCityDuel = 14;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityC5OnClicking() {
-        //
+        SelectedCityDuel = 15;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityD1OnClicking() {
-        //
+        SelectedCityDuel = 16;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityD2OnClicking() {
-        //
+        SelectedCityDuel = 17;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityD3OnClicking() {
-        //
+        SelectedCityDuel = 18;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityD4OnClicking() {
-        //
+        SelectedCityDuel = 19;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityD5OnClicking() {
-        //
+        SelectedCityDuel = 20;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityEOnClicking() {
-        //
+        SelectedCityDuel = 21;
+        Scene08LoadRun.Scene08Load();
     }
 
     public void CityBackButtonClicking() {
+        SelectedCityDuel = 0;
         EnableObjects07.ShowLevelCities = 0;
     }
 

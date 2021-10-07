@@ -48,6 +48,11 @@ public class EnableObjects02 : MonoBehaviour {
     public Text SignUpFavGodInput;
     public Image SignUpButton;
 
+    public Text ErrorMessageLogIn;
+    public Image ErrorButtonLogIn;
+    public Text ErrorMessageSignUp;
+    public Image ErrorButtonSignUp;
+
 // -------------------- PRIVATE VARIABLES --------------------
     public static int LogInSignUpInt;
 
@@ -71,6 +76,8 @@ public class EnableObjects02 : MonoBehaviour {
         DisableSignUpSetB();
         DisableLogInButtonOff();
         DisableSignUpButtonOn();
+        DisableErrorLogIn();
+        DisableErrorSignUp();
 
         LogInSignUpInt = 0;
     }
@@ -90,6 +97,8 @@ public class EnableObjects02 : MonoBehaviour {
             DisableSignUpSetB();
             DisableLogInButtonOff();
             DisableSignUpButtonOn();
+            DisableErrorLogIn();
+            DisableErrorSignUp();
 
             if ((LogInUsernameInput.text == null) || (LogInUsernameInput.text == "")) {
                 LogInUsernamePlace.enabled = true;
@@ -110,6 +119,8 @@ public class EnableObjects02 : MonoBehaviour {
             DisableSignUpSetB();
             DisableLogInButtonOn();
             DisableSignUpButtonOff();
+            DisableErrorLogIn();
+            DisableErrorSignUp();
 
             if ((SignUpUsernameInput.text == null) || (SignUpUsernameInput.text == "")) {
                 SignUpUsernamePlace.enabled = true;
@@ -140,6 +151,8 @@ public class EnableObjects02 : MonoBehaviour {
             DisableSignUpSetA();
             DisableLogInButtonOn();
             DisableSignUpButtonOff();
+            DisableErrorLogIn();
+            DisableErrorSignUp();
 
             if ((SignUpFavGodInput.text == null) || (SignUpFavGodInput.text == "")) {
                 SignUpFavGodPlace.enabled = true;
@@ -150,6 +163,32 @@ public class EnableObjects02 : MonoBehaviour {
                 SignUpFavGodPlace.enabled = false;
                 SignUpFavGodInput.enabled = true;
             }
+        }
+
+        else if (LogInSignUpInt == 3) {
+            DisableSignUpSetB();
+            DisableLogInButtonOff();
+            DisableSignUpButtonOn();
+            DisableLogInSet();
+            DisableSignUpSetA();
+            DisableLogInButtonOn();
+            DisableSignUpButtonOff();
+            DisableErrorSignUp();
+
+            EnableErrorLogIn();
+        }
+
+        else if (LogInSignUpInt == 4) {
+            DisableSignUpSetB();
+            DisableLogInButtonOff();
+            DisableSignUpButtonOn();
+            DisableLogInSet();
+            DisableSignUpSetA();
+            DisableLogInButtonOn();
+            DisableSignUpButtonOff();
+            DisableErrorLogIn();
+
+            EnableErrorSignUp();
         }
 
         VersionText.text = PlayerDatabase.VersionText;
@@ -214,6 +253,16 @@ public class EnableObjects02 : MonoBehaviour {
         SignUpButton.enabled = true;
     }
 
+    public void EnableErrorLogIn() {
+        ErrorMessageLogIn.enabled = true;
+        ErrorButtonLogIn.enabled = true;
+    }
+
+    public void EnableErrorSignUp() {
+        ErrorMessageSignUp.enabled = true;
+        ErrorButtonSignUp.enabled = true;
+    }
+
 // -------------------- DISABLE OBJECT FUNCTIONS --------------------
     public void DisableMain() {
         BackgroundImage.enabled = false;
@@ -271,6 +320,16 @@ public class EnableObjects02 : MonoBehaviour {
         SignUpFavGodPlace.enabled = false;
         SignUpFavGodInput.enabled = false;
         SignUpButton.enabled = false;
+    }
+
+    public void DisableErrorLogIn() {
+        ErrorMessageLogIn.enabled = false;
+        ErrorButtonLogIn.enabled = false;
+    }
+
+    public void DisableErrorSignUp() {
+        ErrorMessageSignUp.enabled = false;
+        ErrorButtonSignUp.enabled = false;
     }
 
 // ------------------------------ END: OTHER FUNCTIONS ------------------------------

@@ -23,6 +23,8 @@ public class Buttons02 : MonoBehaviour {
     public Button SignUpRealmLightButton;
     public Button SignUpRealmSeaButton;
     public Button SignUpRealmSkiesButton;
+    public Button ErrorButtonLogIn;
+    public Button ErrorButtonSignUp;
 
     public Text LogInUsernameInput;
     public Text SignUpUsernameInput;
@@ -103,6 +105,14 @@ public class Buttons02 : MonoBehaviour {
         // SignUpRealmSkiesButton
         Button SignUpRealmSkiesButtonClick = SignUpRealmSkiesButton.GetComponent<Button>();
         SignUpRealmSkiesButtonClick.onClick.AddListener(SignUpRealmSkiesButtonClicking);
+
+        // ErrorButtonLogIn
+        Button ErrorButtonLogInClick = ErrorButtonLogIn.GetComponent<Button>();
+        ErrorButtonLogInClick.onClick.AddListener(ErrorButtonLogInClicking);
+
+        // ErrorButtonSignUp
+        Button ErrorButtonSignUpClick = ErrorButtonSignUp.GetComponent<Button>();
+        ErrorButtonSignUpClick.onClick.AddListener(ErrorButtonSignUpClicking);
     }
 
 // -------------------- AWAKE FUNCTION --------------------
@@ -157,6 +167,14 @@ public class Buttons02 : MonoBehaviour {
 
     public void SignUpNextButtonClicking() {
         EnableObjects02.LogInSignUpInt = 2;
+    }
+
+    public void ErrorButtonLogInClicking() {
+        EnableObjects02.LogInSignUpInt = 0;
+    }
+
+    public void ErrorButtonSignUpClicking() {
+        EnableObjects02.LogInSignUpInt = 1;
     }
 
     public void SignUpButtonClicking() {
@@ -866,7 +884,7 @@ public class Buttons02 : MonoBehaviour {
         PlayerDatabase.StoreBoughtWorldPack = "0";
 
         // Start Coroutine
-        StartCoroutine(SettingNewPlayer());
+        StartCoroutine(CheckLogInName());
     }
 
     public void SignUpRealmDarkButtonClicking() {
@@ -1212,11 +1230,23 @@ public class Buttons02 : MonoBehaviour {
 
             else {
                 if (CheckLogInNameWWW.downloadHandler.text != "Unable to view database") {
-                    StartCoroutine(LoadPlayerData());
+                    if (EnableObjects02.LogInSignUpInt == 2) {
+                        EnableObjects02.LogInSignUpInt = 4;
+                    }
+
+                    else if (EnableObjects02.LogInSignUpInt == 0) {
+                        StartCoroutine(LoadPlayerData());
+                    }
                 }
 
                 else {
+                    if (EnableObjects02.LogInSignUpInt == 2) {
+                        StartCoroutine(SettingNewPlayer());
+                    }
 
+                    else if (EnableObjects02.LogInSignUpInt == 0) {
+                        EnableObjects02.LogInSignUpInt = 3;
+                    }
                 }
             }
         }
