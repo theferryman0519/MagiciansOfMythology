@@ -30,9 +30,8 @@ public class SceneChange : MonoBehaviour {
     public static string Scene09 = "09StoryGamePlay";
     public static string Scene10 = "10MultiplayerMode";
     public static string Scene11 = "11YourDeck";
-    public static string Scene12 = "12CardList";
-    public static string Scene13 = "13Settings";
-    public static string Scene14 = "14ContactUs";
+    public static string Scene12 = "12Settings";
+    public static string Scene13 = "13ContactUs";
 
 // ------------------------------ END: LIST OF VARIABLES ------------------------------
 // ------------------------------ START: CALLING OTHER SCRIPTS ------------------------------
@@ -119,19 +118,14 @@ public class SceneChange : MonoBehaviour {
         SceneManager.LoadScene(Scene11);
     }
 
-    // Load Scene12 - Card List Scene
+    // Load Scene12 - Settings Scene
     public void Scene12Load() {
         SceneManager.LoadScene(Scene12);
     }
 
-    // Load Scene13 - Settings Scene
+    // Load Scene13 - Contact Us Scene
     public void Scene13Load() {
         SceneManager.LoadScene(Scene13);
-    }
-
-    // Load Scene14 - Contact Us Scene
-    public void Scene14Load() {
-        SceneManager.LoadScene(Scene14);
     }
 
 // ------------------------------ END: OTHER FUNCTIONS ------------------------------

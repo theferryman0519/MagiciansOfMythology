@@ -27,7 +27,6 @@ public class EnableObjects05 : MonoBehaviour {
     public Image StoryModeButton;
     public Image MultiplayerButton;
     public Image YourDeckButton;
-    public Image CardListButton;
     public Image SettingsButton;
     public Image ContactUsButton;
 
@@ -72,7 +71,6 @@ public class EnableObjects05 : MonoBehaviour {
         StoryModeButton.enabled = true;
         MultiplayerButton.enabled = true;
         YourDeckButton.enabled = true;
-        CardListButton.enabled = true;
         SettingsButton.enabled = true;
         ContactUsButton.enabled = true;
     }
@@ -87,7 +85,6 @@ public class EnableObjects05 : MonoBehaviour {
         StoryModeButton.enabled = false;
         MultiplayerButton.enabled = false;
         YourDeckButton.enabled = false;
-        CardListButton.enabled = false;
         SettingsButton.enabled = false;
         ContactUsButton.enabled = false;
     }

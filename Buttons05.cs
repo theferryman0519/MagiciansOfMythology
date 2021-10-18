@@ -15,7 +15,6 @@ public class Buttons05 : MonoBehaviour {
     public Button StoryModeButton;
     // public Button MultiplayerButton;
     public Button YourDeckButton;
-    public Button CardListButton;
     public Button SettingsButton;
     public Button ContactUsButton;
 
@@ -34,7 +33,6 @@ public class Buttons05 : MonoBehaviour {
     public SceneChange Scene11LoadRun;
     public SceneChange Scene12LoadRun;
     public SceneChange Scene13LoadRun;
-    public SceneChange Scene14LoadRun;
 
 // ------------------------------ END: CALLING OTHER SCRIPTS ------------------------------
 // ------------------------------ START: CALLING INITIAL FUNCTIONS ------------------------------
@@ -55,10 +53,6 @@ public class Buttons05 : MonoBehaviour {
         // YourDeckButton
         Button YourDeckButtonClick = YourDeckButton.GetComponent<Button>();
         YourDeckButtonClick.onClick.AddListener(YourDeckButtonClicking);
-
-        // CardListButton
-        Button CardListButtonClick = CardListButton.GetComponent<Button>();
-        CardListButtonClick.onClick.AddListener(CardListButtonClicking);
 
         // SettingsButton
         Button SettingsButtonClick = SettingsButton.GetComponent<Button>();
@@ -102,17 +96,12 @@ public class Buttons05 : MonoBehaviour {
         Scene11LoadRun.Scene11Load();
     }
 
-    public void CardListButtonClicking() {
-        // Run coroutine for loading card data
+    public void SettingsButtonClicking() {
         Scene12LoadRun.Scene12Load();
     }
 
-    public void SettingsButtonClicking() {
-        Scene13LoadRun.Scene13Load();
-    }
-
     public void ContactUsButtonClicking() {
-        Scene14LoadRun.Scene14Load();
+        Scene13LoadRun.Scene13Load();
     }
 
 // ------------------------------ END: OTHER FUNCTIONS ------------------------------

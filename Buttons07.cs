@@ -192,7 +192,7 @@ public class Buttons07 : MonoBehaviour {
 // ------------------------------ START: OTHER FUNCTIONS ------------------------------
 // -------------------- BUTTON FUNCTIONS --------------------
     public void RandomButtonClicking() {
-        SelectedCityDuel = Random.Range(1,22);
+        SelectedCityDuel = 22;
         Scene08LoadRun.Scene08Load();
     }
 

@@ -243,6 +243,10 @@ public class EnableObjects08 : MonoBehaviour {
         else if (Buttons07.SelectedCityDuel == 21) {
             CityDuelText.text = "Computer Duel at" + "\n" + "Athens";
         }
+
+        else if (Buttons07.SelectedCityDuel == 22) {
+            CityDuelText.text = "Computer Random Duel";
+        }
     }
 
     public void UpdatePanelView() {
