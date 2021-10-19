@@ -24,7 +24,7 @@ public class Buttons08 : MonoBehaviour {
 // ------------------------------ START: CALLING OTHER SCRIPTS ------------------------------
     // Scene Changing
     public SceneChange Scene07LoadRun;
-    public SceneChange Scene09LoadRun;
+    public SceneChange Scene09ALoadRun;
 
 // ------------------------------ END: CALLING OTHER SCRIPTS ------------------------------
 // ------------------------------ START: CALLING INITIAL FUNCTIONS ------------------------------
@@ -74,7 +74,7 @@ public class Buttons08 : MonoBehaviour {
     }
 
     public void BeginDuelButtonClicking() {
-        Scene09LoadRun.Scene09Load();
+        Scene09ALoadRun.Scene09ALoad();
     }
 
     public IEnumerator GettingResults() {

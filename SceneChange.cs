@@ -27,7 +27,9 @@ public class SceneChange : MonoBehaviour {
     public static string Scene06 = "06GameStore";
     public static string Scene07 = "07StoryMode";
     public static string Scene08 = "08StoryRPS";
-    public static string Scene09 = "09StoryGamePlay";
+    public static string Scene09A = "09StoryGamePlayA";
+    public static string Scene09B = "09StoryGamePlayB";
+    public static string Scene09C = "09StoryGamePlayC";
     public static string Scene10 = "10MultiplayerMode";
     public static string Scene11 = "11YourDeck";
     public static string Scene12 = "12Settings";
@@ -103,9 +105,19 @@ public class SceneChange : MonoBehaviour {
         SceneManager.LoadScene(Scene08);
     }
 
-    // Load Scene09 - Story Game Play Scene
-    public void Scene09Load() {
-        SceneManager.LoadScene(Scene09);
+    // Load Scene09A - Story Game Play Scene
+    public void Scene09ALoad() {
+        SceneManager.LoadScene(Scene09A);
+    }
+
+    // Load Scene09B - Story Game Play Scene
+    public void Scene09BLoad() {
+        SceneManager.LoadScene(Scene09B);
+    }
+
+    // Load Scene09C - Story Game Play Scene
+    public void Scene09CLoad() {
+        SceneManager.LoadScene(Scene09C);
     }
 
     // Load Scene10 - Multiplayer Mode Scene
